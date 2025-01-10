@@ -4,14 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div>
         <h1>My To-Do List</h1>
         <input type="text" id="task" placeholder="Ajouter une tâche">
-        <button onclick="addTask()">Ajouter</button>
+        <input type="date" id="date-input">
+        <select id="category-input">
+            <option value="dislabe selected">Choisir une catégorie</option>
+            <option value="travail">Travail</option>
+            <option value="personnel">Personnel</option>
+            <option value="autre">Autre</option>
+        </select>
+        <select id="priority-input">
+            <option value="basse">Basse</option>
+            <option value="moyenne">Moyenne</option>
+            <option value="haute">Haute</option>
+        </select>
+        <button onclick="addTask()">Ajouter</button><br>
+        <input type="text" id="search-input" placeholder="Rechercher des tâches">
+
+        <button onclick="filterTask('all')">Toutes</button>
+        <button onclick="filterTask('completed')">Tâche terminé</button>
+        <button onclick="filterTask('ongoing')">Tâche en cours</button>
+        
         <h3>La liste des tâches</h3>
+        <ul id="task-list">
+        </ul>
+        
+
+
         <ul id="task-list">
         </ul>
 

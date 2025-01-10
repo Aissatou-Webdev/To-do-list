@@ -37,10 +37,13 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 li.completed{
     text-decoration: linen;
-    color: #888;
+    color: #f20f79;
 }
 li button{
     background-color: red;
@@ -53,3 +56,46 @@ li button{
 li  button:hover {
     background-color: #c82333;
 }
+#task-input, #date-input, #priority-input {
+     padding: 10px;
+     margin-right: 10px;
+     }
+    #category-input {
+        padding: 10px 20px;
+        background-color: rgb(42, 129, 104);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+        #priority-input {
+            padding: 10px 20px;
+            background-color: rgb(42, 129, 104);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #Sadjo{
+            padding: 10px 20px;
+            background-color: rgb(42, 129, 104);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+        li.show{
+            opacity: 1;
+            transform: translateY();
+        }
+
+        .priority-high {
+            background-color: #ff4c4c;
+        }
+        .priority-medium {
+            background-color: #ffcc00;
+        }
+        .priority-low {
+            background-color: #4caf50;
+        }
